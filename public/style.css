@@ -1,0 +1,29 @@
+p {
+    margin: 0px !important;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Add your desired background color here */
+}
+
+.login-container {
+    width: 400px;
+    text-align: center;
+    background-color: #ffffff; /* Add your desired background color here */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for visual effect */
+}
+
+.fa-small {
+    font-size: 16px !important; 
+}
+
+.btn-float {
+    float: left;
+    margin-right: 10px; 
+}
