@@ -12,19 +12,18 @@ const dotenv = require('dotenv');
 // Load config
 dotenv.config({ path: './config/config.env' });
 
-// passport config
-require('./config/passport')(passport);
 
 // sessions
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false,
-  }))
+}))
 
 // passport  middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 // middleware
 app.use(express.static('./public'));
@@ -34,7 +33,6 @@ app.use(express.json());
 
 // routes
 app.use('/api/v1/tasks', task);
-app.use('/auth', require('./routes/auth'))
 app.use(notFound);
 app.use(errorHandlerMiddleware);
 
